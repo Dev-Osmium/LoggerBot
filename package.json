@@ -1,0 +1,23 @@
+{
+  "name": "loggerbot",
+  "version": "1.0.0",
+  "description": "Discord Logging bot that logs literally every message",
+  "main": "bot.js",
+  "scripts": {
+    "test": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dev-Osmium/LoggerBot.git"
+  },
+  "author": "Owen Salter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dev-Osmium/LoggerBot/issues"
+  },
+  "homepage": "https://github.com/Dev-Osmium/LoggerBot#readme",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "winston": "^2.4.2"
+  }
+}
