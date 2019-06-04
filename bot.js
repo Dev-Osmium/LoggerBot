@@ -26,12 +26,14 @@ client.on('ready', () => {
 })
 
 client.on('message', (message) => {
-    if (message.author.bot) return;
-    logger.log('info', `${message.author.username} sent a message containing the following text: ${message.content}`);
-    if(config.logChannel) {
-        guild = message.guild;
-        logChannel = guild.channels.get(config.logChannelId);
-        logChannel.send(`${message.author.username} sent a message containing the following text: ${message.content}`)
+    if (message.guild) {
+        if (message.author.bot) return;
+        logger.log('info', `${message.author.username} sent a message containing the following text: ${message.content}`);
+        if (config.logChannel) {
+            guild = message.guild;
+            logChannel = guild.channels.get(config.logChannelId);
+            logChannel.send(`${message.author.username} sent a message containing the following text: ${message.content}`)
+        }
     }
 })
 
