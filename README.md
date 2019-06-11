@@ -1,10 +1,10 @@
 # LoggerBot
 Discord Logging bot that logs literally every message
 
-![GPL](https://www.gnu.org/graphics/gplv3-with-text-136x68.png)
-
 Discord message and attachment logging bot
+
 Copyright (C) 2019  Owen Salter <Dev-Osmium>
+
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
