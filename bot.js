@@ -26,7 +26,7 @@ client.on('ready', () => {
 })
 
 client.on('message', (message) => {
-    var logMsg = `<@${message.author.id}> sent a message in <#${message.channel.id}>: ${message.content}`;
+    var logMsg = `${message.author.username}#${message.author.discriminator} sent a message in <#${message.channel.id}>: ${message.content}`;
     if (message.guild) {
         if (message.author.bot) return;
         logger.log('info', logMsg);
