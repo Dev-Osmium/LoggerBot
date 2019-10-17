@@ -36,7 +36,7 @@ client.on('message', (message) => {
         if (config.logChannel) {
             guild = message.guild;
             logChannel = guild.channels.get(config.logChannelId);
-            logChannel.send(`${message.author.username} sent a message containing the following text: ${message.content}`)
+            logChannel.send(`${message.author.username} sent a message in <#${message.channel.id}> containing the following text: ${message.content}`)
         }
     }
 })
