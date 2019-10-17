@@ -28,7 +28,7 @@ client.on('ready', () => {
 client.on('message', (message) => {
     if (message.guild) {
         if (message.author.bot) return;
-        logger.log('info', `${message.author.username} sent a message containing the following text: ${message.content}`);
+        logger.log('info', `${message.author.username} sent a message in <#${message.channel.id}> containing the following text: ${message.content}`);
         if (message.attachments) {
             var attachments = message.attachments;
             
