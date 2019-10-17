@@ -26,9 +26,10 @@ client.on('ready', () => {
 })
 
 client.on('message', (message) => {
+    var logMsg = `<@${message.author.id}> sent a message in <#${message.channel.id}>: ${message.content}`;
     if (message.guild) {
         if (message.author.bot) return;
-        logger.log('info', `${message.author.username} sent a message in <#${message.channel.id}> containing the following text: ${message.content}`);
+        logger.log('info', logMsg);
         if (message.attachments) {
             var attachments = message.attachments;
             
@@ -36,7 +37,7 @@ client.on('message', (message) => {
         if (config.logChannel) {
             guild = message.guild;
             logChannel = guild.channels.get(config.logChannelId);
-            logChannel.send(`${message.author.username} sent a message in <#${message.channel.id}> containing the following text: ${message.content}`)
+            logChannel.send(logMsg);
         }
     }
 })
